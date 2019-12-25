@@ -212,6 +212,7 @@ public class RegionBasicController extends BaseController implements Initializab
      * @param regionBasic
      */
     public void  loadData(RegionBasic regionBasic){
+        System.out.println("7777777777777777777777777777777777777777");
 
         isnum.setUserData(regionBasic.getId());
         isnum.setText(regionBasic.getIsnum());

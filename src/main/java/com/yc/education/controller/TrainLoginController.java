@@ -40,8 +40,8 @@ public class TrainLoginController implements Initializable {
 
 
         closeWin();
-
         NetworkConfiguration.trainHomeShow();
+
         System.err.println("*************************************************************************************************");
         System.err.println("*********************************************欢迎登录训练系统*************************************");
         System.err.println("*************************************************************************************************");

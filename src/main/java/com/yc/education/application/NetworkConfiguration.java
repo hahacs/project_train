@@ -52,7 +52,7 @@ public class NetworkConfiguration {
         pane.getChildren().setAll(loader.load("/fxml/home.fxml"));
         stage.getIcons().add(new Image(
                 ResolverUtil.Test.class.getResourceAsStream("/images/timg.jpg")));
-        Scene  scene = new Scene(pane);
+        Scene scene = new Scene(pane);
         stage.setScene(scene);
 
         /*stage.setMaximized(true);*/  //默认窗口最大化
@@ -72,7 +72,7 @@ public class NetworkConfiguration {
                 ResolverUtil.Test.class.getResourceAsStream("/images/timg.jpg")));
         Scene scene = new Scene(pane);
         stage.setScene(scene);
-        stage.setMaximized(true);
+//        stage.setMaximized(true);
 
         /*stage.setMaximized(true);*/  //默认窗口最大化
         /*stage.setResizable(false); //禁止窗体缩放*/

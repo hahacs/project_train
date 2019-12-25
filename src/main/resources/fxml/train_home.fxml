@@ -19,7 +19,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="anPane" onMouseDragged="#changeWinSize"  maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="850.0" prefWidth="1415.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.yc.education.controller.TrainHomeController">
+<AnchorPane fx:id="anPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" onMouseDragged="#changeWinSize" prefHeight="850.0" prefWidth="1415.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.yc.education.controller.TrainHomeController">
    <children>
       <StackPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
 
@@ -84,7 +84,7 @@
 
 
 
-                  <HBox prefHeight="70.0" prefWidth="1415.0">
+                  <HBox prefHeight="10.0" prefWidth="1415.0">
                       <children>
                           <VBox prefHeight="55.0" prefWidth="65.0" styleClass="menu_tools,mouse_hover">
                               <children>
@@ -93,14 +93,14 @@
                                           <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                                       </padding>
                                       <children>
-                                          <ImageView fitHeight="26.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                                          <ImageView fitHeight="18.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
                                               <image>
                                                   <Image url="@../images/basic/stock_query.png" />
                                               </image>
                                           </ImageView>
                                       </children>
                                       <VBox.margin>
-                                          <Insets bottom="10.0" left="20.0" right="10.0" top="10.0" />
+                                          <Insets bottom="5.0" left="20.0" right="5.0" top="5.0" />
                                       </VBox.margin>
                                   </Pane>
                                   <Label styleClass="menu_words" text="库存查询" textAlignment="CENTER">
@@ -128,14 +128,14 @@
                                           <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                                       </padding>
                                       <children>
-                                          <ImageView fitHeight="26.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                                          <ImageView fitHeight="20.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
                                               <image>
                                                   <Image url="@../images/basic/sh_top.png" />
                                               </image>
                                           </ImageView>
                                       </children>
                                       <VBox.margin>
-                                          <Insets bottom="10.0" left="28.0" right="10.0" top="10.0" />
+                                          <Insets bottom="5.0" left="28.0" right="5.0" top="5.0" />
                                       </VBox.margin>
                                   </Pane>
                                   <Label styleClass="menu_words" text="待审核单据" textAlignment="CENTER">
@@ -160,10 +160,10 @@
                               <children>
                                   <Pane prefHeight="20.0" prefWidth="24.0">
                                       <padding>
-                                          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                          <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
                                       </padding>
                                       <children>
-                                          <ImageView fitHeight="26.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                                          <ImageView fitHeight="21.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
                                               <image>
                                                   <Image url="@../images/basic/with_top.png" />
                                               </image>
@@ -235,9 +235,9 @@
                                               <HBox.margin>
                                                   <Insets right="10.0" />
                                               </HBox.margin>
-                                              <VBox.margin>
-                                                  <Insets top="10.0" />
-                                              </VBox.margin>
+                                              <!--<VBox.margin>-->
+                                                  <!--<Insets top="5.0" />-->
+                                              <!--</VBox.margin>-->
                                           </VBox>
 
                                           <VBox fx:id="btn1" onMouseClicked="#btn1Click" prefHeight="65.0" prefWidth="40.0" styleClass="menu_tools,mouse_hover" stylesheets="/css/home.css" userData="1">
@@ -533,7 +533,7 @@
 
                               </children>
                           </Pane>
-                          <Pane fx:id="homePane" layoutX="40.0" layoutY="60.0" prefHeight="710.0" prefWidth="716.0" AnchorPane.bottomAnchor="44.0" />
+                          <Pane fx:id="homePane" layoutX="40.0" layoutY="60.0" prefHeight="748.0" prefWidth="716.0" AnchorPane.bottomAnchor="44.0" />
 
                       </children>
 

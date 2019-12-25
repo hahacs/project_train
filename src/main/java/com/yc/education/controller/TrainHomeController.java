@@ -35,7 +35,8 @@ public class TrainHomeController extends BaseController implements Initializable
 
     private VBox attrVbox ;
 
-    private  String url="/fxml/sale_data.fxml"; //默认fxml
+//    private  String url="/fxml/sale_data.fxml"; //默认fxml
+    private  String url="/fxml/train_data.fxml"; //默认fxml
 
     private final String defaultColor="-fx-background-color:#EFF3F7;";  //默认按钮颜色
 
@@ -152,11 +153,13 @@ public class TrainHomeController extends BaseController implements Initializable
         //统计汇总
         if(type==8){url="/fxml/baseline_data.fxml";}
 
-        if(type==9){url="/fxml/basic_data.fxml";}
+        if(type==9){url="/fxml/train_data.fxml";}
 
         Pane pane = new Pane();
 
         pane.getChildren().setAll(loader.load(url));
+
+        System.out.println("url:"+url);
 
 //        node.getScene().getStylesheets().add(getClass().getResource("/css/home.css").toExternalForm());
 

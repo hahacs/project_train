@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.yc.education.mapper.customer.TrainMainMapper" >
+  <resultMap id="BaseResultMap" type="com.yc.education.model.customer.TrainMain" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="id" property="id" jdbcType="VARCHAR" />
+    <result column="trainTitle" property="trainTitle" jdbcType="VARCHAR" />
+    <result column="trainContent" property="trainContent" typeHandler="com.yc.education.util.BlobTypeHandler" />
+    <result column="trainType" property="trainType" jdbcType="INTEGER" />
+    <result column="trainTimes" property="trainTimes" jdbcType="INTEGER" />
+    <result column="trainAllTime" property="trainAllTime" jdbcType="BIGINT" />
+    <result column="lastTrainTime" property="lastTrainTime" jdbcType="TIMESTAMP" />
+    <result column="date_created" property="date_created" jdbcType="TIMESTAMP" />
+    <result column="remark" property="remark" jdbcType="VARCHAR" />
+    <result column="planFlag" property="planFlag" jdbcType="VARCHAR" />
+
+  </resultMap>
+
+  <select id="getTrainMainById" resultMap="BaseResultMap">
+      SELECT * FROM t_train_main WHERE id = #{id} limit 0,1
+  </select>
+
+  <select id="selectTrainMain" resultMap="BaseResultMap">
+    SELECT * FROM t_train_main order by id DESC
+  </select>
+
+  <select id="listTrainMainAll" resultMap="BaseResultMap">
+        SELECT * FROM t_train_main ORDER BY id desc
+    </select>
+
+</mapper>

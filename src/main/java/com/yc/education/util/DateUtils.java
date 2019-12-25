@@ -193,7 +193,7 @@ public class DateUtils {
 	/**
 	 * 获取与指定日期相差年份数的相同日期
 	 * @param date
-	 * @param month
+	 * @param year
 	 * @return
 	 */
 	public static Date getPreviousOrNextYearsOfDate(Date date, int year) {
@@ -450,7 +450,6 @@ public class DateUtils {
 
 	/**
 	 * 获取当前日期下个月的相同日期
-	 * @param date
 	 * @return
 	 */
 	public static Long getTheSameDayOfNextMonth() {
@@ -571,6 +570,25 @@ public class DateUtils {
 	    newday.set(Calendar.SECOND, 0);
 	    newday.set(Calendar.MILLISECOND, 0);
 	    return newday.getTime();
+	}
+
+	public static String getDateStringBySec(Long mss) {
+		String DateTimes = null;
+		long days = mss / ( 60 * 60 * 24);
+		long hours = (mss % ( 60 * 60 * 24)) / (60 * 60);
+		long minutes = (mss % ( 60 * 60)) /60;
+		long seconds = mss % 60;
+		if(days>0){
+			DateTimes= days + "天" + hours + "小时" + minutes + "分钟" + seconds + "秒";
+		}else if(hours>0){
+			DateTimes=hours + "小时" + minutes + "分钟"+ seconds + "秒";
+		}else if(minutes>0){
+			DateTimes=minutes + "分钟"+ seconds + "秒";
+		}else{
+			DateTimes=seconds + "秒";
+		}
+
+		return DateTimes;
 	}
 	
 }

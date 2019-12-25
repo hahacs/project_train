@@ -257,6 +257,17 @@ public class BaseController {
 
     }
 
+    public String getComboTrans(long type,int index){
+        String name = String.valueOf(index);
+        List<DataSetting> comboBoxType = dataSettingService.findDataSetting(type);
+        for (DataSetting combox:comboBoxType) {
+            if(index == combox.getSort()){
+                name = combox.getTitle();
+            }
+        }
+        return name;
+    }
+
 
 
 

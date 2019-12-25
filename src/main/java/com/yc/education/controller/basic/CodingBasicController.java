@@ -102,12 +102,6 @@ public class CodingBasicController extends BaseController implements Initializab
         }else if(type==3){
             searchProduct(isNum.getText());
         }
-
-
-
-
-
-
     }
 
 

@@ -215,6 +215,27 @@
     -fx-background-repeat:no-repeat;
 }
 
+#trainbeginimg{
+    -fx-background-image: url("/images/basic/kq.png");
+    -fx-background-repeat:no-repeat;
+}
+
+.mouse_hover:hover #trainbeginimg{
+    -fx-background-image: url("/images/basic/kqed.png") !important;
+    -fx-background-repeat:no-repeat;
+}
+
+#trainendimg{
+    -fx-background-image: url("/images/basic/kq.png");
+    -fx-background-repeat:no-repeat;
+}
+
+.mouse_hover:hover #trainendimg{
+    -fx-background-image: url("/images/basic/kqed.png") !important;
+    -fx-background-repeat:no-repeat;
+}
+
+
 /*审核*/
 #shyesimg{
     -fx-background-image: url("/images/basic/sh.png");

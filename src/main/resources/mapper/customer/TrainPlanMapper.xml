@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.yc.education.mapper.customer.TrainPlanMapper" >
+  <resultMap id="BaseResultMap" type="com.yc.education.model.customer.TrainPlan" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="id" property="id" jdbcType="VARCHAR" />
+    <id column="serialno" property="serialNo" jdbcType="BIGINT" />
+
+    <result column="planTime" property="planTime" jdbcType="TIMESTAMP" />
+    <result column="trainTime" property="trainTime" jdbcType="TIMESTAMP" />
+    <result column="trainFlag" property="trainFlag" jdbcType="VARCHAR" />
+
+  </resultMap>
+
+  <select id="getTrainPlanById" resultMap="BaseResultMap">
+      SELECT * FROM t_train_plan WHERE id = #{id} order by serialno
+  </select>
+
+  <select id="getTrainPlanByPlanDay" resultMap="BaseResultMap">
+      SELECT * FROM t_train_plan WHERE planTime = #{planTime,jdbcType=DATE} and trainFlag = '0'
+  </select>
+
+  <select id="getTrainPlanByIdAndPlanDay" resultMap="BaseResultMap">
+      SELECT * FROM t_train_plan WHERE planTime = #{planTime,jdbcType=DATE} and trainFlag = '0' and id = #{id}
+  </select>
+
+  <select id="selectTrainPlan" resultMap="BaseResultMap">
+    SELECT * FROM t_train_plan order by id DESC
+  </select>
+
+  <select id="listTrainPlanAll" resultMap="BaseResultMap">
+        SELECT * FROM t_train_plan ORDER BY id desc
+    </select>
+
+</mapper>
