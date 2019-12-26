@@ -170,6 +170,8 @@ public class TrainHomeController extends BaseController implements Initializable
 
     public void changeWinSize(){
         System.err.println("====");
+//        java.awt.Toolkit.getDefaulToolkit().getScreenSize();
+        System.out.println(java.awt.Toolkit.getDefaultToolkit().getScreenSize());
 
     }
 

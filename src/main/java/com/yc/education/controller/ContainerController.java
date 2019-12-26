@@ -34,7 +34,8 @@ public class ContainerController implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
-        containerPane.getChildren().addAll(loader.load("/fxml/home.fxml"));
+//        containerPane.getChildren().addAll(loader.load("/fxml/home.fxml"));
+        containerPane.getChildren().addAll(loader.load("/fxml/train_home.fxml"));
 
 
     }

@@ -67,7 +67,8 @@ public class NetworkConfiguration {
         Stage stage = new Stage();
         stage.setTitle("训练系统");
         Pane pane = new Pane();
-        pane.getChildren().setAll(loader.load("/fxml/train_home.fxml"));
+//        pane.getChildren().setAll(loader.load("/fxml/train_home.fxml"));
+        pane.getChildren().setAll(loader.load("/fxml/container.fxml"));
         stage.getIcons().add(new Image(
                 ResolverUtil.Test.class.getResourceAsStream("/images/timg.jpg")));
         Scene scene = new Scene(pane);
