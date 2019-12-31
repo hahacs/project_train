@@ -23,6 +23,7 @@
 
 <!-- 当天训练计划查询 -->
 
+<?import javafx.scene.control.CheckBox?>
 <AnchorPane maxWidth="1143.0" prefHeight="1010.0" prefWidth="1143.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.yc.education.controller.basic.AllTrainBasicController">
     <children>
         <TabPane fx:id="tabPane" focusTraversable="false" layoutY="0.0" prefHeight="1046.0" prefWidth="1143.0" rotateGraphic="true" stylesheets="@/css/basic.css" tabClosingPolicy="UNAVAILABLE">
@@ -618,7 +619,8 @@
 
                                         </children>
                                     </GridPane>
-                                      <Label fx:id="fxmlTrainTime" layoutX="17.0" layoutY="14.0" prefHeight="18.0" prefWidth="267.0" text="本次训练时间：" />
+                                        <Label fx:id="fxmlTrainTime" layoutX="17.0" layoutY="14.0" prefHeight="18.0" prefWidth="267.0" text="本次训练时间：" />
+                                        <CheckBox fx:id="fxmlErrorFlag" layoutX="721.0" layoutY="14.0" mnemonicParsing="false" text="本次训练是否出错" />
                                 </children>
                             </Pane>
                         </VBox>

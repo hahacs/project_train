@@ -86,6 +86,20 @@ public class TrainMain {
     @Column(name = "planFlag")
     private String planFlag;
 
+    /**
+     * 训练错误次数
+     */
+    @Column(name = "errorTimes")
+    private int errorTimes;
+
+    public int getErrorTimes() {
+        return errorTimes;
+    }
+
+    public void setErrorTimes(int errorTimes) {
+        this.errorTimes = errorTimes;
+    }
+
     public String getId() {
         return id;
     }

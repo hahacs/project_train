@@ -21,7 +21,7 @@
 
 <AnchorPane fx:id="anPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" onMouseDragged="#changeWinSize" prefHeight="850.0" prefWidth="1415.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.yc.education.controller.TrainHomeController">
    <children>
-      <StackPane  AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <StackPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
 
           <VBox layoutX="144.0" layoutY="165.0" prefHeight="850.0" prefWidth="1415.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
               <children>
@@ -81,8 +81,6 @@
                           </Menu>
                       </menus>
                   </MenuBar>
-
-
 
                   <HBox prefHeight="10.0" prefWidth="1415.0">
                       <children>
@@ -194,14 +192,10 @@
                       </children>
                   </HBox>
 
-
                   <HBox prefHeight="723.0" prefWidth="1415.0">
                       <children>
                           <Pane layoutX="-1.0" layoutY="60.0" prefHeight="718.0" prefWidth="48.0">
                               <children>
-
-
-
                                   <VBox prefHeight="718.0" prefWidth="48.0">
 
                                       <children>
@@ -521,19 +515,11 @@
                                                   <Insets top="10.0" />
                                               </VBox.margin>
                                           </VBox>
-
-
-
                                       </children>
-
                                   </VBox>
-
-
-
-
                               </children>
                           </Pane>
-                          <Pane fx:id="homePane" layoutX="40.0" layoutY="60.0" prefHeight="748.0" prefWidth="716.0" AnchorPane.bottomAnchor="44.0" />
+                          <Pane fx:id="homePane" layoutX="40.0" layoutY="60.0" prefHeight="715.0" prefWidth="716.0" AnchorPane.bottomAnchor="44.0" />
 
                       </children>
 

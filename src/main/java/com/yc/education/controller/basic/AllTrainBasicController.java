@@ -31,6 +31,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.CheckBox;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.SingleSelectionModel;
@@ -161,6 +162,9 @@ public class AllTrainBasicController extends BaseController implements Initializ
     @FXML TableColumn trainAllTimeStr; //训练总时长
     @FXML TableColumn lastTrainTime;//最后一次训练时间
     @FXML TableColumn date_created;//创建时间
+
+    @FXML
+    CheckBox fxmlErrorFlag;
 
 
     @FXML private TableView tableViewRegion; //区域查询查询
@@ -734,6 +738,13 @@ public class AllTrainBasicController extends BaseController implements Initializ
         Long preTrainAllTime = trainMainById.getTrainAllTime()==null?0L:trainMainById.getTrainAllTime();
         Long updateTrainTime = new BigDecimal(preTrainAllTime).add(new BigDecimal((currentTrainTime.getTime() - startTraintime.getTime())/1000)).longValue();
         trainMainById.setTrainAllTime(updateTrainTime);
+
+        //是否训练错误，是的话训练错误次数加1
+        if (fxmlErrorFlag.isSelected()) {
+            int errorTime = trainMainById.getErrorTimes()+1;
+            trainMainById.setErrorTimes(errorTime);
+        }
+
         iTrainMainService.updateNotNull(trainMainById);
 
         //训练计划表更新 当天训练计划
@@ -754,12 +765,11 @@ public class AllTrainBasicController extends BaseController implements Initializ
                     trainPlan1.setTrainFlag("1");
                     trainPlan1.setTrainTime(new Date());
                     iTrainPlanService.updateNotNull(trainPlan1);
+                    timeline.stop();
                     return;
                 }
             }
         }
-
-
 
         timeline.stop();
     }
@@ -814,6 +824,8 @@ public class AllTrainBasicController extends BaseController implements Initializ
                     list.add(iTrainMainService.getTrainMainById(trainPlan1.getId()));
                 }
             }
+        } else if ("3".equals(type)) {
+
         }
 
         if(list != null){

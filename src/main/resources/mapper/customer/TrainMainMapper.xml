@@ -15,6 +15,7 @@
     <result column="date_created" property="date_created" jdbcType="TIMESTAMP" />
     <result column="remark" property="remark" jdbcType="VARCHAR" />
     <result column="planFlag" property="planFlag" jdbcType="VARCHAR" />
+    <result column="errorTimes" property="errorTimes" jdbcType="INTEGER" />
 
   </resultMap>
 
