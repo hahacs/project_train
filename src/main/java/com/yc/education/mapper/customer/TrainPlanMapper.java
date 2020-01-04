@@ -13,6 +13,8 @@ public interface TrainPlanMapper extends Mapper<TrainPlan> {
 
     List<TrainPlan> getTrainPlanByPlanDay(@Param("planTime") Date planTime);
 
+    List<TrainPlan> getTrainPlanOverdue();
+
     List<TrainPlan> getTrainPlanByIdAndPlanDay(@Param("planTime") Date planTime,@Param("id") String id);
 
     /**
@@ -22,4 +24,7 @@ public interface TrainPlanMapper extends Mapper<TrainPlan> {
     List<TrainPlan> selectTrainPlan();
 
     List<TrainPlan> listTrainPlanAll();
+
+    //获取未来10天训练计划
+    List<TrainPlan> getTrainPlanFuture();
 }

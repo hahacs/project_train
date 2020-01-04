@@ -85,6 +85,7 @@ public class TrainDataController implements Initializable {
         if(value.equals("全部训练项目")){url="/fxml/basic/all_train_basic.fxml";}
         if(value.equals("当天训练计划")){url="/fxml/basic/train_plan.fxml";}
         if(value.equals("未来十天训练计划")){url="/fxml/basic/future_plan.fxml";}
+        if(value.equals("逾期训练项目")){url="/fxml/basic/overdue_plan.fxml";}
 
         if(!"".equals(url)){
            Pane pane = new Pane();
@@ -109,7 +110,7 @@ public class TrainDataController implements Initializable {
         //训练计划
         TreeItem<String> itemTrain = new TreeItem<>("训练计划");
         itemTrain.setExpanded(true);
-        String[] dataArrayTrain = {"全部训练项目","当天训练计划","未来十天训练计划"};
+        String[] dataArrayTrain = {"全部训练项目","当天训练计划","未来十天训练计划","逾期训练项目"};
         for (int i = 0; i < dataArrayTrain.length; i++) {
             TreeItem<String> item = new TreeItem<> (dataArrayTrain[i]);
             itemTrain.getChildren().add(item);

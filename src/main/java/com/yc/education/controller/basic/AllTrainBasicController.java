@@ -66,7 +66,9 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.ResourceBundle;
 import java.util.UUID;
 import java.util.concurrent.atomic.AtomicInteger;
@@ -755,10 +757,7 @@ public class AllTrainBasicController extends BaseController implements Initializ
                 trainPlan1.setTrainFlag("1");
                 iTrainPlanService.updateNotNull(trainPlan1);
             }
-        }
-
-        //常规训练，就更新计划表最新的那次
-        if ("1".equals(String.valueOf(trainListType.getUserData()))) {
+        }else{
             List<TrainPlan> trainPlanById = iTrainPlanService.getTrainPlanById(String.valueOf(uuid.getUserData()));
             for (TrainPlan trainPlan1 : trainPlanById) {
                 if("0".equals(trainPlan1.getTrainFlag())){
@@ -770,6 +769,20 @@ public class AllTrainBasicController extends BaseController implements Initializ
                 }
             }
         }
+
+        //常规训练，就更新计划表最新的那次
+//        if ("1".equals(String.valueOf(trainListType.getUserData()))) {
+//            List<TrainPlan> trainPlanById = iTrainPlanService.getTrainPlanById(String.valueOf(uuid.getUserData()));
+//            for (TrainPlan trainPlan1 : trainPlanById) {
+//                if("0".equals(trainPlan1.getTrainFlag())){
+//                    trainPlan1.setTrainFlag("1");
+//                    trainPlan1.setTrainTime(new Date());
+//                    iTrainPlanService.updateNotNull(trainPlan1);
+//                    timeline.stop();
+//                    return;
+//                }
+//            }
+//        }
 
         timeline.stop();
     }
@@ -814,7 +827,7 @@ public class AllTrainBasicController extends BaseController implements Initializ
 
         List<TrainMain> list = new ArrayList<>();
 
-        //1：全部训练列表 2：当天训练计划
+        //1：全部训练列表 2：当天训练计划 3:未来10天训练计划 4：逾期训练
         if("1".equals(type)){
             list = iTrainMainService.listTrainMainAll();
         } else if ("2".equals(type)) {
@@ -825,7 +838,24 @@ public class AllTrainBasicController extends BaseController implements Initializ
                 }
             }
         } else if ("3".equals(type)) {
+            Map inclueMap = new HashMap();
 
+            List<TrainPlan> trainPlanByPlanDay = iTrainPlanService.getTrainPlanFuture();
+            if (trainPlanByPlanDay != null && trainPlanByPlanDay.size() > 0) {
+                for (TrainPlan trainPlan1 : trainPlanByPlanDay) {
+                    if(!inclueMap.containsKey(trainPlan1.getId())){
+                        inclueMap.put(trainPlan1.getId(),trainPlan1.getId());
+                        list.add(iTrainMainService.getTrainMainById(trainPlan1.getId()));
+                    }
+                }
+            }
+        } else if ("4".equals(type)) {
+            List<TrainPlan> trainPlanByPlanDay = iTrainPlanService.getTrainPlanOverdue();
+            if (trainPlanByPlanDay != null && trainPlanByPlanDay.size() > 0) {
+                for (TrainPlan trainPlan1 : trainPlanByPlanDay) {
+                    list.add(iTrainMainService.getTrainMainById(trainPlan1.getId()));
+                }
+            }
         }
 
         if(list != null){

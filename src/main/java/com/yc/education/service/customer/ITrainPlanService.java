@@ -24,4 +24,8 @@ public interface ITrainPlanService extends IService<TrainPlan>{
     public List<TrainPlan> getTrainPlanByPlanDay(Date date);
 
     public List<TrainPlan> getTrainPlanByIdAndPlanDay(Date planTime,String id);
+
+    public List<TrainPlan> getTrainPlanOverdue();
+
+    public List<TrainPlan> getTrainPlanFuture();
 }

@@ -24,11 +24,11 @@
   </select>
 
   <select id="selectTrainMain" resultMap="BaseResultMap">
-    SELECT * FROM t_train_main order by id DESC
+    SELECT * FROM t_train_main order by date_created DESC
   </select>
 
   <select id="listTrainMainAll" resultMap="BaseResultMap">
-        SELECT * FROM t_train_main ORDER BY id desc
+        SELECT * FROM t_train_main ORDER BY date_created desc
     </select>
 
 </mapper>

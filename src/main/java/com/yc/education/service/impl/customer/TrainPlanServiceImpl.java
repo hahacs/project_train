@@ -49,6 +49,24 @@ public class TrainPlanServiceImpl extends BaseService<TrainPlan> implements ITra
     }
 
     @Override
+    public List<TrainPlan> getTrainPlanOverdue() {
+        try{
+            return mapper.getTrainPlanOverdue();
+        }catch (Exception e){
+            return null;
+        }
+    }
+
+    @Override
+    public List<TrainPlan> getTrainPlanFuture() {
+        try{
+            return mapper.getTrainPlanFuture();
+        }catch (Exception e){
+            return null;
+        }
+    }
+
+    @Override
     public List<TrainPlan> getTrainPlanByIdAndPlanDay(Date planTime,String id) {
         try{
             return mapper.getTrainPlanByIdAndPlanDay(planTime,id);

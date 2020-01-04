@@ -22,6 +22,14 @@
       SELECT * FROM t_train_plan WHERE planTime = #{planTime,jdbcType=DATE} and trainFlag = '0'
   </select>
 
+  <select id="getTrainPlanOverdue" resultMap="BaseResultMap">
+      SELECT * FROM t_train_plan WHERE planTime &lt; now() and trainFlag = '0'
+  </select>
+
+  <select id="getTrainPlanFuture" resultMap="BaseResultMap">
+      SELECT * FROM t_train_plan WHERE (TO_DAYS(planTime) - TO_DAYS(NOW())) &lt;= 10 and (TO_DAYS(planTime) - TO_DAYS(NOW())) &gt; 0 and trainTime is null  and trainFlag = '0'
+  </select>
+
   <select id="getTrainPlanByIdAndPlanDay" resultMap="BaseResultMap">
       SELECT * FROM t_train_plan WHERE planTime = #{planTime,jdbcType=DATE} and trainFlag = '0' and id = #{id}
   </select>
