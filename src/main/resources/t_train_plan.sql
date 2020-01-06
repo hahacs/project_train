@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50528
 File Encoding         : 65001
 
-Date: 2020-01-04 19:03:22
+Date: 2020-01-06 20:00:39
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -52,7 +52,7 @@ INSERT INTO `t_train_plan` VALUES ('2d48a9121273497bbd705fb84d7d34f0', '8', '202
 INSERT INTO `t_train_plan` VALUES ('2d48a9121273497bbd705fb84d7d34f0', '9', '2020-01-30', null, '0');
 INSERT INTO `t_train_plan` VALUES ('2d48a9121273497bbd705fb84d7d34f0', '10', '2020-01-31', null, '0');
 INSERT INTO `t_train_plan` VALUES ('2de89308fefd43b681c99fb3d8bed7a6', '1', '2020-01-04', '2020-01-04 18:52:00', '1');
-INSERT INTO `t_train_plan` VALUES ('2de89308fefd43b681c99fb3d8bed7a6', '2', '2020-01-05', null, '0');
+INSERT INTO `t_train_plan` VALUES ('2de89308fefd43b681c99fb3d8bed7a6', '2', '2020-01-05', '2020-01-06 19:59:57', '1');
 INSERT INTO `t_train_plan` VALUES ('2de89308fefd43b681c99fb3d8bed7a6', '3', '2020-01-06', null, '0');
 INSERT INTO `t_train_plan` VALUES ('2de89308fefd43b681c99fb3d8bed7a6', '4', '2020-01-08', null, '0');
 INSERT INTO `t_train_plan` VALUES ('2de89308fefd43b681c99fb3d8bed7a6', '5', '2020-01-13', null, '0');
@@ -64,7 +64,7 @@ INSERT INTO `t_train_plan` VALUES ('2de89308fefd43b681c99fb3d8bed7a6', '10', '20
 INSERT INTO `t_train_plan` VALUES ('4f5512108b5a43a19857e1aa60578d6f', '1', '2019-12-31', '2019-12-31 10:48:56', '1');
 INSERT INTO `t_train_plan` VALUES ('4f5512108b5a43a19857e1aa60578d6f', '2', '2020-01-01', '2020-01-01 02:04:34', '1');
 INSERT INTO `t_train_plan` VALUES ('4f5512108b5a43a19857e1aa60578d6f', '3', '2020-01-02', '2020-01-04 17:05:43', '1');
-INSERT INTO `t_train_plan` VALUES ('4f5512108b5a43a19857e1aa60578d6f', '4', '2020-01-04', null, '0');
+INSERT INTO `t_train_plan` VALUES ('4f5512108b5a43a19857e1aa60578d6f', '4', '2020-01-04', '2020-01-06 19:50:14', '1');
 INSERT INTO `t_train_plan` VALUES ('4f5512108b5a43a19857e1aa60578d6f', '5', '2020-01-09', null, '0');
 INSERT INTO `t_train_plan` VALUES ('4f5512108b5a43a19857e1aa60578d6f', '6', '2020-01-10', null, '0');
 INSERT INTO `t_train_plan` VALUES ('4f5512108b5a43a19857e1aa60578d6f', '7', '2020-01-17', null, '0');
@@ -94,7 +94,7 @@ INSERT INTO `t_train_plan` VALUES ('6f6a7d8658fd4fd4aa16675f7c6f390a', '10', '20
 INSERT INTO `t_train_plan` VALUES ('767e97eb47d54eecb5cb0ce55d5ed570', '1', '2020-01-01', '2020-01-01 16:00:12', '1');
 INSERT INTO `t_train_plan` VALUES ('767e97eb47d54eecb5cb0ce55d5ed570', '2', '2020-01-02', '2020-01-04 17:34:55', '1');
 INSERT INTO `t_train_plan` VALUES ('767e97eb47d54eecb5cb0ce55d5ed570', '3', '2020-01-03', null, '0');
-INSERT INTO `t_train_plan` VALUES ('767e97eb47d54eecb5cb0ce55d5ed570', '4', '2020-01-05', null, '0');
+INSERT INTO `t_train_plan` VALUES ('767e97eb47d54eecb5cb0ce55d5ed570', '4', '2020-01-05', '2020-01-05 11:00:52', '1');
 INSERT INTO `t_train_plan` VALUES ('767e97eb47d54eecb5cb0ce55d5ed570', '5', '2020-01-10', null, '0');
 INSERT INTO `t_train_plan` VALUES ('767e97eb47d54eecb5cb0ce55d5ed570', '6', '2020-01-11', null, '0');
 INSERT INTO `t_train_plan` VALUES ('767e97eb47d54eecb5cb0ce55d5ed570', '7', '2020-01-18', null, '0');
@@ -113,8 +113,8 @@ INSERT INTO `t_train_plan` VALUES ('8269821bb2f74d3aad26e70b424f95c7', '9', '202
 INSERT INTO `t_train_plan` VALUES ('8269821bb2f74d3aad26e70b424f95c7', '10', '2020-01-31', null, '0');
 INSERT INTO `t_train_plan` VALUES ('da68ea242b8f41bd86d4669f08a863f9', '1', '2020-01-01', '2020-01-01 16:01:09', '1');
 INSERT INTO `t_train_plan` VALUES ('da68ea242b8f41bd86d4669f08a863f9', '2', '2020-01-02', '2020-01-04 17:13:16', '1');
-INSERT INTO `t_train_plan` VALUES ('da68ea242b8f41bd86d4669f08a863f9', '3', '2020-01-03', null, '0');
-INSERT INTO `t_train_plan` VALUES ('da68ea242b8f41bd86d4669f08a863f9', '4', '2020-01-05', null, '0');
+INSERT INTO `t_train_plan` VALUES ('da68ea242b8f41bd86d4669f08a863f9', '3', '2020-01-03', '2020-01-06 19:48:47', '1');
+INSERT INTO `t_train_plan` VALUES ('da68ea242b8f41bd86d4669f08a863f9', '4', '2020-01-05', '2020-01-05 11:06:29', '1');
 INSERT INTO `t_train_plan` VALUES ('da68ea242b8f41bd86d4669f08a863f9', '5', '2020-01-10', null, '0');
 INSERT INTO `t_train_plan` VALUES ('da68ea242b8f41bd86d4669f08a863f9', '6', '2020-01-11', null, '0');
 INSERT INTO `t_train_plan` VALUES ('da68ea242b8f41bd86d4669f08a863f9', '7', '2020-01-18', null, '0');
