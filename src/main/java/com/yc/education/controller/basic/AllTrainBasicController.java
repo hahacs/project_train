@@ -48,6 +48,8 @@ import javafx.scene.control.cell.TextFieldTableCell;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
@@ -58,6 +60,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.util.Assert;
 
+import java.awt.Dimension;
+import java.awt.Toolkit;
 import java.math.BigDecimal;
 import java.net.URL;
 import java.text.SimpleDateFormat;
@@ -180,6 +184,13 @@ public class AllTrainBasicController extends BaseController implements Initializ
     @FXML private TableColumn findemployeeid; //员工编号
     @FXML private TableColumn findemployeename; //员工姓名
 
+    @FXML AnchorPane anchorPanew;
+    @FXML HBox hBoxw1;
+    @FXML HBox hBoxw2;
+    @FXML Pane panew;
+    @FXML VBox vBoxw;
+    @FXML HBox hBoxw;
+
     private long regNum=0;
 
     private Stage stage = new Stage();
@@ -205,6 +216,16 @@ public class AllTrainBasicController extends BaseController implements Initializ
 //            findSupplier(1);
 //        }
         loadData();
+
+        Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+
+        anchorPanew.prefWidthProperty().setValue(screenSize.getWidth());
+        tabPane.prefWidthProperty().setValue(screenSize.getWidth());
+        hBoxw1.prefWidthProperty().bind(anchorPanew.widthProperty());
+        hBoxw2.prefWidthProperty().bind(anchorPanew.widthProperty());
+        panew.prefWidthProperty().bind(anchorPanew.widthProperty());
+        vBoxw.prefWidthProperty().bind(anchorPanew.widthProperty());
+        hBoxw.prefWidthProperty().bind(anchorPanew.widthProperty());
     }
 
     public void moreRegionButtonClick(){

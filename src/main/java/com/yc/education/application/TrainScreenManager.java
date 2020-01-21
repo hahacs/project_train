@@ -11,6 +11,8 @@ import org.apache.ibatis.io.ResolverUtil;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import java.awt.Dimension;
+import java.awt.Toolkit;
 import java.util.Observable;
 import java.util.Observer;
 
@@ -18,7 +20,6 @@ public class TrainScreenManager implements Observer {
 
     private static Logger logger = LogManager.getLogger(ScreenManager.class);
     private static SpringFxmlLoader loader = new SpringFxmlLoader();
-
 
     private Stage stage;
     private Scene scene;
@@ -28,6 +29,14 @@ public class TrainScreenManager implements Observer {
     }
 
     public void showStage() {
+//        showStageWithLogin();
+        showStageWithNoLogin();
+    }
+
+    /**
+     * 先进登录页面
+     */
+    public void showStageWithLogin(){
         stage.setTitle("");
         Pane pane = new Pane();
         pane.getChildren().setAll(loader.load("/fxml/train_login.fxml"));
@@ -41,6 +50,25 @@ public class TrainScreenManager implements Observer {
         stage.setHeight(630.0);
         stage.setWidth(1030.0);
         DragUtil.addDragListener(stage, pane); //拖拽监听
+        stage.show();
+    }
+
+    public void showStageWithNoLogin(){
+        Stage stage = new Stage();
+        stage.setTitle("训练系统");
+        Pane pane = new Pane();
+        pane.getChildren().setAll(loader.load("/fxml/container.fxml"));
+        stage.getIcons().add(new Image(ResolverUtil.Test.class.getResourceAsStream("/images/timg.jpg")));
+        Scene scene = new Scene(pane);
+        stage.setScene(scene);
+
+        //根据屏幕大小自适应宽高度
+        Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+        System.out.println(screenSize.getHeight());
+        System.out.println(screenSize.getWidth());
+        stage.setHeight(screenSize.getHeight()-30);
+        stage.setWidth(screenSize.getWidth()-170);
+
         stage.show();
     }
 

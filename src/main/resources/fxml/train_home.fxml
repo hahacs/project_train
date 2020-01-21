@@ -84,7 +84,7 @@
 
                   <HBox prefHeight="10.0" prefWidth="1415.0">
                       <children>
-                          <VBox prefHeight="55.0" prefWidth="65.0" styleClass="menu_tools,mouse_hover">
+                          <VBox prefHeight="55.0" prefWidth="65.0" styleClass="menu_tools,mouse_hover" >
                               <children>
                                   <Pane prefHeight="20.0" prefWidth="24.0">
                                       <padding>
@@ -194,7 +194,7 @@
 
                   <HBox prefHeight="723.0" prefWidth="1415.0">
                       <children>
-                          <Pane layoutX="-1.0" layoutY="60.0" prefHeight="718.0" prefWidth="48.0">
+                          <Pane fx:id="leftPane" layoutX="-1.0" layoutY="60.0" prefHeight="718.0" prefWidth="48.0">
                               <children>
                                   <VBox prefHeight="718.0" prefWidth="48.0">
 
@@ -519,7 +519,7 @@
                                   </VBox>
                               </children>
                           </Pane>
-                          <Pane fx:id="homePane" layoutX="40.0" layoutY="60.0" prefHeight="715.0" prefWidth="716.0" AnchorPane.bottomAnchor="44.0" />
+                          <Pane fx:id="homePane" layoutX="40.0" layoutY="60.0" prefHeight="723.0" prefWidth="646.0" AnchorPane.bottomAnchor="44.0" />
 
                       </children>
 

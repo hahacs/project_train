@@ -197,7 +197,10 @@ public class TrainHomeController extends BaseController implements Initializable
             btn9.getChildren().get(1).setStyle(checkedFontColor);
             Pane pane = new Pane();
             pane.getChildren().setAll(loader.load(url));
+            homePane.prefWidthProperty().bind(anPane.prefWidthProperty());
             homePane.getChildren().setAll(pane);
+
+
 
 
     }

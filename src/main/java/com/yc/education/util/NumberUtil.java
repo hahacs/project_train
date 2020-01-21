@@ -4,6 +4,8 @@ import javafx.scene.control.Label;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 /**
  * @ClassName NumberUtil
@@ -111,5 +113,17 @@ public class NumberUtil {
     }
 
 
+    /**
+     * 生成tagId
+     * @return
+     */
+    public static String getTagId() {
+        String taskId = "";
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMdd");
+        int intFlag = (int) (Math.random() * 1000000);
+        String flag = String.valueOf(intFlag);
+        taskId = sdf.format(new Date()) + flag;
+        return taskId;
+    }
 
 }
